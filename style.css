@@ -140,3 +140,6 @@ body {
 .footer-column a:hover {
     text-decoration: underline;
 }
+svg{
+    margin-top: 50px;
+}
