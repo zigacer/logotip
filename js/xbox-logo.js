@@ -8,7 +8,6 @@ window.onload = function () {
 
     function drawLogo() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.scale(1.0, 1.0);
         ctx.lineWidth = 1;
         ctx.strokeStyle = logoColor;
         ctx.fillStyle = logoColor;
