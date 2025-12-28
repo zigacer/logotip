@@ -1,31 +1,36 @@
-# Xbox logotip z Bezierjevimi krivuljami (HTML & SVG)
+# Xbox logotip – SVG & Canvas (HTML)
 
-Ta projekt prikazuje izdelavo **Xbox logotipa** z uporabo **Bezierjevih krivulj** v **SVG** ter njegovo vključitev v preprosto spletno stran z HTML-jem. Namen projekta je prikaz uporabe SVG `<path>` elementov za natančno risanje kompleksnih oblik, kot je logotip.
+Ta projekt prikazuje izdelavo **Xbox logotipa** na dva različna načina v HTML-ju:
+- z uporabo **SVG in Bezierjevih krivulj**
+- z uporabo **HTML Canvas**
+
+Cilj projekta je primerjati oba pristopa ter prikazati, kako lahko isti logotip narišemo z različnimi spletnimi tehnologijami.
 
 ---
 
 ## 📌 Opis projekta
 
 V tem repozitoriju:
-- je Xbox logotip narisan ročno s pomočjo **Bezierjevih krivulj**
-- je uporabljen **SVG znotraj HTML dokumenta**
-- je logotip prikazan neposredno na spletni strani
-- je koda preprosta in primerna za učenje ali nadgradnjo
+- je Xbox logotip narisan z **Bezierjevimi krivuljami v SVG**
+- je isti logotip narisan tudi z uporabo **Canvas API-ja**
+- sta obe verziji vključeni v spletno stran
+- je projekt namenjen učenju in demonstraciji grafike v HTML-ju
 
-Projekt je primeren za razumevanje:
-- kako delujejo Bezierjeve krivulje (`M`, `C`, `L`)
-- kako ustvariti logotip brez slik (samo koda)
-- kako SVG vključiti v spletno stran
+Projekt prikazuje razlike med:
+- **SVG** (vektorska grafika, `<path>`)
+- **Canvas** (risanje s kodo, `context.beginPath()`)
 
 ---
 
 ## 🖼️ Predogled
 
-*(Dodaj slike v repozitorij in posodobi poti)*
+*(Dodaj sliki v mapo `assets/` in po potrebi spremeni poti)*
 
-![Xbox logo – SVG](assets/xbox-logo.png)
+### SVG verzija (Bezier krivulje)
+![Xbox logo SVG](assets/xbox-svg.png)
 
-![Xbox logo na spletni strani](assets/xbox-web.png)
+### Canvas verzija (HTML Canvas)
+![Xbox logo Canvas](assets/xbox-canvas.png)
 
 ---
 
