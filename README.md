@@ -21,4 +21,27 @@ Koordinate Bezierjevih krivulj so bile pridobljene s pomočjo programa **GIMP** 
 
 ---
 
-## Struktura projekta
+## Canvas – `bezierCurveTo()`
+Canvas različica uporablja JavaScript za izris logotipa z Bezierjevimi krivuljami.  
+Vsaka krivulja je definirana z dvema kontrolnima točkama in končno točko, kar omogoča natančen in gladek izris oblike logotipa.
+
+---
+
+## SVG
+SVG različica uporablja značko `<svg>` in element `<path>`, kjer so Bezierjeve krivulje definirane z ukazom `C`.  
+Prednost SVG pristopa je boljša skalabilnost in neodvisnost od JavaScript kode.
+
+---
+
+## Rezultat
+- Xbox logotip, izrisan z:
+  - HTML5 Canvas (programski izris)
+  - SVG (vektorski izris)
+- Vizualno natančna reprodukcija originalnega znaka
+
+---
+
+## Avtor
+Žiga Cerar  
+Šola / predmet  
+2025
