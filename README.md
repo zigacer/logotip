@@ -39,6 +39,12 @@ Prednost SVG pristopa je boljša skalabilnost in neodvisnost od JavaScript kode.
 - Vizualno natančna reprodukcija originalnega znaka
 
 ---
+## Navodila za uporabo 
+- PNG logo je v glavi strani
+- SVG logo je v nogi strani
+- Canvas logo je na sredinski sliki -> barvo se mu zamenja z gumbom "CHANGE"
+
+---
 
 ## Avtor
   <b>Žiga Černe Bralič</b><br>
