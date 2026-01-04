@@ -1,38 +1,24 @@
-# Xbox logotip – SVG & Canvas (HTML)
+# Xbox Logo – Bezier Curves (HTML5 Canvas & SVG)
 
-Ta projekt prikazuje izdelavo **Xbox logotipa** na dva različna načina v HTML-ju:
-- z uporabo **SVG in Bezierjevih krivulj**
-- z uporabo **HTML Canvas**
+## Opis projekta
+Projekt prikazuje izris **Xbox logotipa** z uporabo **Bezierjevih krivulj** v jeziku **HTML5**.  
+Logotip je izdelan na dva različna načina:
+- z uporabo **HTML5 Canvas API-ja** in funkcije `bezierCurveTo()`
+- z uporabo **SVG grafike** (`<svg>` in `<path>`)
 
-Cilj projekta je primerjati oba pristopa ter prikazati, kako lahko isti logotip narišemo z različnimi spletnimi tehnologijami.
-
----
-
-## 📌 Opis projekta
-
-V tem repozitoriju:
-- je Xbox logotip narisan z **Bezierjevimi krivuljami v SVG**
-- je isti logotip narisan tudi z uporabo **Canvas API-ja**
-- sta obe verziji vključeni v spletno stran
-- je projekt namenjen učenju in demonstraciji grafike v HTML-ju
-
-Projekt prikazuje razlike med:
-- **SVG** (vektorska grafika, `<path>`)
-- **Canvas** (risanje s kodo, `context.beginPath()`)
+Koordinate Bezierjevih krivulj so bile pridobljene s pomočjo programa **GIMP** z uporabo orodja **Potipoti (Paths Tool)**.
 
 ---
 
-## 🖼️ Predogled
-
-*(Dodaj sliki v mapo `assets/` in po potrebi spremeni poti)*
-
-### SVG verzija (Bezier krivulje)
-![Xbox logo SVG](assets/xbox-svg.png)
-
-### Canvas verzija (HTML Canvas)
-![Xbox logo Canvas](assets/xbox-canvas.png)
+## Uporabljene tehnologije
+- **HTML5**
+  - `<canvas>`
+  - `<svg>`
+- **JavaScript**
+  - `bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)`
+- **GIMP**
+  - Orodje Potipoti (Bezierjeve krivulje)
 
 ---
 
-## 📂 Struktura projekta
-
+## Struktura projekta
