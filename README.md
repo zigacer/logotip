@@ -48,5 +48,5 @@ Prednost SVG pristopa je boljša skalabilnost in neodvisnost od JavaScript kode.
 ---
 
 ## Avtor
-  <b>Žiga Černe Bralič</b><br>
+  <b>Žiga Černe Bralić</b><br>
   Dijak pri predmetu <b>NSA</b>
