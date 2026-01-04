@@ -16,8 +16,7 @@ Koordinate Bezierjevih krivulj so bile pridobljene s pomočjo programa **GIMP** 
   - `<svg>`
 - **JavaScript**
   - `bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)`
-- **GIMP**
-  - Orodje Potipoti (Bezierjeve krivulje)
+
 
 ---
 
