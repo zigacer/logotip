@@ -43,6 +43,7 @@ Prednost SVG pristopa je boljša skalabilnost in neodvisnost od JavaScript kode.
 - PNG logo je v glavi strani
 - SVG logo je v nogi strani
 - Canvas logo je na sredinski sliki -> barvo se mu zamenja z gumbom "CHANGE"
+<img width="1906" height="916" alt="logotipi" src="https://github.com/user-attachments/assets/38570672-9c59-4780-a01d-242826a4d9ef" />
 
 ---
 
