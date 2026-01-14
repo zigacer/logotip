@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <title>PC Game Pass</title>
     <link rel="stylesheet" href="style.css">
-	<script src="js/xbox-logo.js" defer></script>
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 
@@ -13,34 +15,24 @@
         <img src="slike/microsoft-logo.png" alt="Microsoft" class="logo-img">
         <span class="divider">|</span>
         <img src="slike/xbox-logo.png" alt="Xbox" class="logo-img xbox">
-    </div>
-
-    <nav class="nav">
         <a href="#">Game Pass</a>
         <a href="#">Support</a>
-    </nav>
-
-    <div class="actions">
-        <a href="#">Log In</a>
     </div>
+    <div class="actions"><a href="#">Log In</a></div>
 </header>
 
 <main class="hero">
     <div class="hero-text">
         <h1>PC Game Pass</h1>
         <p>Play hundreds of high-quality PC games for one low monthly price.</p>
-
         <div class="buttons">
-            <label for="colorInput" class="btn primary">CHANGE</label>
-            <input type="color" id="colorInput" style="display: none;">
+            <button class="btn primary" id="joinNowBtn">JOIN NOW</button>
             <a href="#" class="btn secondary">LEARN MORE</a>
         </div>
     </div>
-
     <div class="hero-image">
-        <img src ="slike/hero.png" alt="Hero Image" id="hero-img">
-		<canvas id="canvas" width="800" height="500"></canvas>
-	</div>
+        <img src="slike/colorful.jpg" alt="Hero Image" id="hero-img">
+    </div>
 </main>
 
 <footer class="footer">
@@ -49,57 +41,13 @@
         <a href="#">PC Game Pass</a>
         <a href="#">PC Game Pass games</a>
         <a href="#">Xbox app on Windows PC</a>
-        <svg
-  width="32"
-  height="32"
-  viewBox="0 0 32 32"
-  xmlns="http://www.w3.org/2000/svg"
-  fill="#555"
-  stroke="#555"
-  stroke-width="1"
->
-  <path d="
-    M16 5.4
-    C14.1 4.3 11.9 3.5 9.5 3.2
-    C8.6 3.2 8.0 3.3 7.5 3.6
-    C9.9 2.0 12.8 1.0 16.0 1.0
-    C19.2 1.0 22.1 2.0 24.5 3.6
-    C23.4 3.2 22.8 3.2 22.6 3.2
-    C20.1 3.5 17.9 4.3 16.0 5.4
-    Z
-
-    M5.6 5.3
-    C2.7 8.0 1.0 11.8 1.0 16.0
-    C1.0 19.6 2.2 22.9 4.3 25.5
-    C2.6 22.2 8.8 13.0 11.9 9.3
-    C8.4 5.8 6.6 5.2 5.6 5.3
-    Z
-
-    M20.1 9.3
-    C23.2 13.0 29.5 22.2 27.7 25.4
-    C29.8 22.9 31.0 19.6 31.0 16.0
-    C31.0 11.8 29.3 8.0 26.6 5.3
-    Z
-
-    M6.1 27.3
-    C8.7 29.6 12.2 31.0 16.0 31.0
-    C19.8 31.0 23.3 29.6 25.9 27.3
-    C28.2 24.9 20.5 16.4 16.0 13.0
-    C11.5 16.4 3.8 24.9 6.1 27.3
-    Z
-  "/>
-</svg>
-<a>Xbox is a trademark of Microsoft.</a>
-
     </div>
-
     <div class="footer-column">
         <h4>Resources</h4>
         <a href="#">Xbox Support</a>
         <a href="#">Feedback</a>
         <a href="#">Community Standards</a>
     </div>
-
     <div class="footer-column">
         <h4>Microsoft Store</h4>
         <a href="#">Microsoft account</a>
@@ -108,6 +56,22 @@
     </div>
 </footer>
 
+<script src="js/xbox-logo.js"></script>
+<script>
+document.getElementById("joinNowBtn").addEventListener("click", function () {
+    Swal.fire({
+        title: 'Welcome to PC Game Pass!',
+        html: '<canvas id="canvas" width="320" height="320"></canvas>',
+        showConfirmButton: true,
+        confirmButtonText: 'Start Playing',
+        didOpen: () => {
+            const canvas = document.getElementById("canvas");
+            const ctx = canvas.getContext("2d");
+            drawXboxLogo(ctx); // Draw logo on canvas
+        }
+    });
+});
+</script>
+
 </body>
 </html>
-
