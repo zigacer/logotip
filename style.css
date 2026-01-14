@@ -17,13 +17,27 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 16px 40px;
-    background-color: #000;
+    background-color: white;
 }
 
 .logo {
     display: flex;
     align-items: center;
     gap: 12px;
+}
+
+.logo a {
+    color: black;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.actions a {
+    color: black;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 14px;
 }
 
 .logo-img {
@@ -40,83 +54,96 @@ body {
     font-size: 18px;
 }
 
-/* ===== NAV ===== */
-.nav a,
-.actions a {
-    color: #ccc;
-    margin-left: 20px;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.nav a:hover,
-.actions a:hover {
-    color: #fff;
-}
-
 /* ===== HERO ===== */
 .hero {
     display: flex;
     height: 80vh;
+    min-height: 600px; /* prevent too small on large screens */
 }
 
 .hero-text {
     width: 50%;
     padding: 120px 80px;
-    background-color: #0c0c0c;
+    background-color: #1A1A1A;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* better vertical centering */
 }
 
 .hero-text h1 {
     font-size: 56px;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
+    font-weight: 600;
 }
 
 .hero-text p {
-    font-size: 18px;
-    line-height: 1.5;
-    margin-bottom: 30px;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 40px;
     color: #ccc;
+    max-width: 480px;
 }
 
 .buttons {
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;          /* allow stacking on very narrow screens */
+    gap: 24px;                /* slightly more breathing room */
+    align-items: center;      /* vertical alignment of buttons */
 }
 
 .btn {
-    padding: 14px 28px;
+    padding: 14px 32px;       /* bit wider → more premium feel */
     font-weight: 600;
     text-decoration: none;
-    border-radius: 2px;
-    font-size: 14px;
+    border-radius: 4px;       /* modern subtle rounding */
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
 }
 
 .btn.primary {
-    background-color: #7cff00;
-    color: #000;
+    background-color: #0e7c00; /* darker green like official Xbox green */
+    color: white;
+}
+
+.btn.primary:hover {
+    background-color: #0b5e00;
+    transform: translateY(-1px);
 }
 
 .btn.secondary {
-    color: #7cff00;
+    color: #92ff00;           /* brighter green for contrast */
+    background: transparent;
+    border: 2px solid #92ff00;
+    padding: 12px 32px;       /* slightly thinner border look */
+}
+
+.btn.secondary:hover {
+    background-color: rgba(146, 255, 0, 0.1);
 }
 
 /* ===== HERO IMAGE ===== */
 .hero-image {
     width: 50%;
     position: relative;
-}
-#hero-img {
-    width: 100%;
     height: 100%;
-    
 }
 
-#canvas {
+#hero-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* (keep your canvas if you use it) */
+#canvas1 {
     position: absolute;
-    top: 9.305%;
-    left: 34.6%;
-    width: 83.33%;
-    height: 70%;
+    top: 9.3%;
+    left: 32%;
+    width: 100%;
+    height: 100%;
 }
 
 /* ===== FOOTER ===== */
@@ -126,6 +153,7 @@ body {
     padding: 40px 80px;
     background-color: #f2f2f2;
     color: #000;
+    justify-content: space-between;
 }
 
 .footer-column h4 {
@@ -144,11 +172,17 @@ body {
 .footer-column a:hover {
     text-decoration: underline;
 }
-svg{
-    margin-top: 50px;
-}
 
 /* Responsive styles */
+@media (max-width: 1024px) {
+    .hero-text {
+        padding: 80px 60px;
+    }
+    .hero-text h1 {
+        font-size: 48px;
+    }
+}
+
 @media (max-width: 768px) {
     .topbar {
         flex-direction: column;
@@ -156,50 +190,42 @@ svg{
         gap: 10px;
     }
 
-    .logo {
-        justify-content: center;
-    }
-
-    .nav {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .actions {
-        display: flex;
-        justify-content: center;
-    }
-
     .hero {
         flex-direction: column;
         height: auto;
+        min-height: unset;
     }
 
     .hero-text {
         width: 100%;
-        padding: 60px 40px;
+        padding: 80px 30px;
         text-align: center;
+        justify-content: center;
     }
 
     .hero-text h1 {
-        font-size: 36px;
+        font-size: 42px;
     }
 
     .hero-text p {
-        font-size: 16px;
+        font-size: 18px;
+        margin: 0 auto 32px;
     }
 
     .buttons {
         justify-content: center;
+        gap: 20px;
     }
 
     .hero-image {
         width: 100%;
-        height: 300px;
+        height: 400px; /* or 50vh */
     }
 
-    .footer-column {
+    .footer {
+        flex-direction: column;
+        gap: 40px;
         text-align: center;
+        padding: 40px 20px;
     }
 }
