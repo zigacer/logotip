@@ -1,13 +1,13 @@
 function drawXboxLogo(ctx) {
     const logoColor = "black";
 
-    // Clear canvas
+   
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
     ctx.lineWidth = 1;
     ctx.strokeStyle = logoColor;
     ctx.fillStyle = logoColor;
 
-    // Scale everything to fit canvas
+  
     const scaleX = ctx.canvas.width / 32;  
     const scaleY = ctx.canvas.height / 32;
     ctx.save();

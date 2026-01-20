@@ -64,7 +64,8 @@ body {
 .hero-text {
     width: 50%;
     padding: 120px 80px;
-    background-color: #1A1A1A;
+	background: #000000;
+background: linear-gradient(270deg, rgba(0, 0, 0, 1) 0%, rgba(59, 59, 59, 1) 100%);
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -129,8 +130,20 @@ body {
     width: 50%;
     position: relative;
     height: 100%;
+    overflow: hidden; /* important */
 }
 
+.hero-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(0, 0, 0, 0) 55%,
+        rgba(0, 0, 0, 0.80) 100%
+    );
+    pointer-events: none;
+}
 #hero-img {
     object-fit: cover;
     width: 100%;
