@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
         joinNowBtn.addEventListener("click", function () {
             Swal.fire({
                 title: "Welcome to PC Game Pass!",
-                html: '<canvas id="canvas" width="32" height="32"></canvas>',
+                html: '<canvas id="canvas" width="200" height="200"></canvas>',
                 showConfirmButton: true,
                 confirmButtonColor: "#0e7c00",
                 confirmButtonText: "Start Playing",

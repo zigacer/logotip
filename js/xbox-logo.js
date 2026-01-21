@@ -1,17 +1,26 @@
+// Create and set up the canvas
+const canvas = document.getElementById("logo");
+
+
+const ctx = canvas.getContext("2d");
+
 function drawXboxLogo(ctx) {
     const logoColor = "black";
 
    
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-    ctx.lineWidth = 1;
-    ctx.strokeStyle = logoColor;
-    ctx.fillStyle = logoColor;
 
-  
-    const scaleX = ctx.canvas.width / 32;  
+    
+    const scaleX = ctx.canvas.width / 32;
     const scaleY = ctx.canvas.height / 32;
+
     ctx.save();
-    ctx.scale(scaleX, scaleY); 
+    ctx.scale(scaleX, scaleY);
+
+    
+    ctx.fillStyle = logoColor;
+    ctx.strokeStyle = logoColor;
+    ctx.lineWidth = 0.3;
 
     ctx.beginPath();
 
@@ -49,3 +58,6 @@ function drawXboxLogo(ctx) {
 
     ctx.restore();
 }
+
+
+drawXboxLogo(ctx);
