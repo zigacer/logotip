@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
         learnMoreBtn.addEventListener("click", function () {
             Swal.fire({
                 title: "Credits",
+				
                 html: `
                     <p><strong>Author:</strong> Žiga Černe Bralić</p>
                 `,
